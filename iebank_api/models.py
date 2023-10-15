@@ -10,6 +10,7 @@ class Account(db.Model):
     currency = db.Column(db.String(1), nullable=False, default="€")
     status = db.Column(db.String(10), nullable=False, default="Active")
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    country = db.Column(db.String(32), nullable=False, default="Spain")
 
     def __repr__(self):
         return '<Event %r>' % self.account_number
@@ -20,3 +21,4 @@ class Account(db.Model):
         self.currency = currency
         self.balance = 0.0
         self.status = "Active"
+        self.country = country

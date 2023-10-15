@@ -5,9 +5,9 @@ def test_create_account():
     """
     GIVEN a Account model
     WHEN a new Account is created
-    THEN check the name, account_number, balance, currency, status and created_at fields are defined correctly
+    THEN check the name, account_number, balance, currency,country, status and created_at fields are defined correctly
     """
-    account = Account('John Doe', '€')
+    account = Account('John Doe', '€', 'Spain')
     assert account.name == 'John Doe'
     assert account.currency == '€'
     assert account.account_number != None
