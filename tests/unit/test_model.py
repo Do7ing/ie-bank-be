@@ -5,7 +5,7 @@ def test_create_account():
     """
     GIVEN a Account model
     WHEN a new Account is created
-    THEN check the name, account_number, balance, currency,country, status and created_at fields are defined correctly
+    THEN check the name, account_number, balance, currency, country, status and created_at fields are defined correctly
     """
     account = Account('John Doe', '€', 'Spain')
     assert account.name == 'John Doe'
@@ -16,21 +16,21 @@ def test_create_account():
     assert account.country == 'Spain'
 
 
-def test_create_account_with_initial_balance():
+def test_account_initial_balance():
     """
-    GIVEN a Account model
-    WHEN a new Account is created with an initial balance
-    THEN check the initial balance
+    GIVEN a new Account
+    WHEN a new Account is created
+    THEN check that the initial balance is 0.0
     """
     account = Account('John Doe', '€', 'Spain')
     assert account.balance == 0.0
 
 
-def test_account_status():
+def test_account_default_status():
     """
     GIVEN a new Account
     WHEN a new Account is created
-    THEN check the status is active
+    THEN check that the default status is 'Active'
     """
     account = Account('John Doe', '€', 'Spain')
     assert account.status == 'Active'
