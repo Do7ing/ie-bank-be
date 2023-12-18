@@ -16,7 +16,7 @@ permissions:
 env:
   BACKEND_WEBAPP_DEV: zdakhqan-be-dev
   BACKEND_WEBAPP_UAT: zdakhqan-be-uat
-  BACKEND_WEBAPP_PROD: zdakhqan-be-uat
+  BACKEND_WEBAPP_PROD: zdakhqan-be-prod
   source_branch_name: ${{ github.ref }}
   pr_target_branch_name: ${{ github.base_ref }}
 
