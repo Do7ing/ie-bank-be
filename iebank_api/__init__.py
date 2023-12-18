@@ -22,9 +22,10 @@ elif os.getenv('ENV') == 'ghci':
 elif os.getenv('ENV') == 'uat':
     print("Running in uat mode")
     app.config.from_object('config.UatConfig')
-else:
+# Add shit here
+elif os.getenv('ENV') == 'prod':
     print("Running in production mode")
-    app.config.from_object('config.ProductionConfig')
+    app.config.from_object('config.ProdConfig')
 
 db = SQLAlchemy(app)
 
